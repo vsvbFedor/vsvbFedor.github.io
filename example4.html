@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script>
+    function button() {
+        var s = "Клиент хочет получить связь через ";
+        if ((document.getElementById("radio1").checked | document.getElementById("radio2").checked | document.getElementById("radio3").checked) &
+            (document.getElementById("checkbox1").checked | document.getElementById("checkbox2").checked | document.getElementById("checkbox3").checked) & document.getElementById("nametext").value != "" &
+            document.getElementById("emailtext").value != "" & document.getElementById("phonetext").value != "") {
+            if (document.getElementById("radio1").checked)
+                s += document.getElementById("radio1").value;
+            if (document.getElementById("radio2").checked)
+                s += document.getElementById("radio2").value;
+            if (document.getElementById("radio3").checked)
+                s += document.getElementById("radio3").value;
+            s += "\nТема вопроса: " + document.getElementById("combobox").value;
+            s += "\n Ещё у него вопрос по теме(темам): "
+            if (document.getElementById("checkbox1").checked)
+                s += document.getElementById("checkbox1").value;
+            if (document.getElementById("checkbox2").checked)
+                s += document.getElementById("checkbox2").value;
+            if (document.getElementById("checkbox3").checked)
+                s += document.getElementById("checkbox3").value;
+            s += "\nЛичные данные клиента:\n" + document.getElementById("nametext").value + "\n" + document.getElementById("emailtext").value + "\n" + document.getElementById("phonetext").value;
+        }
+        else {
+            s = "Вы ввели не все данные";
+        }
+        document.getElementById("message").value = s;
+        alert(s);
+    }
+</script>
+
+<body>
+    <nav>
+        <div>
+            <a href="example.html"><img src="img/1.jpg" alt="Логотип" width="150"></a>
+        </div>
+        <div>
+            <li id=diff><a href="example.html" style="color: white">О себе</a></li>
+        </div>
+        <div></div>
+        <li id=diff><a href="example1.html" style="color: white">Резюме</a></li>
+        </div>
+        <div></div>
+        <li id=diff><a href="example2.html" style="color: white">Портфолио</a></li>
+        </div>
+        <div></div>
+        <li id=diff><a href="example3.html" style="color: white">Компетенция</a></li>
+        </div>
+        <div></div>
+        <li id=diff><a href="example4.html" style="color: white">Контакты</a></li>
+        </div>
+    </nav>
+    <header>
+        <h1 class="header-title" style="color: white">Веб - технологии</h1>
+        <h3 class="header-title" style="color: white">Университет "Дубна"</h3>
+    </header>
+    <main>
+        <div class="contacts">
+            <div class="rasm">
+                <h3>Я в социальных сетях:</h3>
+                <div><img src="img/2.jpg" alt="Vk" width="50"><img src="img/8.png" alt="Git" width="50"></div>
+            </div>
+            <div class="rasm">
+                <h3>Почта:</h3>
+                <p>................................................................................</p>
+            </div>
+            <div class="rasm">
+                <h3>Телефон:</h3>
+                <p>............................................................................</p>
+            </div>
+        </div>
+        <h3 style="text-align: center;">Есть вопросы?</h3>
+        <form style="text-align: center;">
+            <div>
+                <p style="text-align: center;">Как вам удобно получить ответ:</p>
+                <p style="text-align: center;"> <input type="radio" id="radio1" name="contact"> по почте</p>
+                <p style="text-align: center;"> <input type="radio" id="radio2" name="contact"> по телефону</p>
+                <p style="text-align: center;"> <input type="radio" id="radio3" name="contact"> не нужно отвечать</p>
+            </div>
+            <div>
+                <p style="text-align: center;">Укажите тему вопроса:</p>
+                <select name="combobox" id="combobox">
+                    <option value="работа">работа</option>
+                    <option value="учеба">учеба</option>
+                </select>
+            </div>
+            <div>
+                <p style="text-align: center;">И ещё один вопрос:</p>
+                <p style="text-align: center;"><input type="checkbox" id="checkbox1" name="checkbox1"> может так</p>
+                <p style="text-align: center;"><input type="checkbox" id="checkbox2" name="checkbox2"> или не так</p>
+                <p style="text-align: center;"><input type="checkbox" id="checkbox3" name="checkbox3"> иначе</p>
+            </div>
+            <div>
+                <label for="name">Имя:</label>
+                <input type="text" name="name" id="nametext">
+            </div>
+            <div>
+                <label for="email">Почта:</label>
+                <input type="text" name="email" id="emailtext">
+            </div>
+            <div>
+                <label for="telephone">Телефон:</label>
+                <input type="text" name="telephone" id="phonetext">
+            </div>
+            <div>
+                <label for="message">Вопрос:</label><br>
+                <textarea name="message" id="message" cols="30" rows="5"></textarea>
+            </div>
+            <div style="padding-bottom: 20px;">
+                <input onclick="button();" type="button" value="Отправить">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div>
+            <img src="img/2.jpg" alt="Vk" width="50"><img src="img/8.png" alt="Git" width="50">
+        </div>
+        <p>Сайт разработан студией Федора Дмитриева, Copyright 2023</p>
+    </footer>
+</body>
+
+</html>
