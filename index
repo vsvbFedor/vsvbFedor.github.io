@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a href="example.html"><img src="img/1.jpg" alt="Логотип" width="150"></a>
+        </div>
+        <div>
+            <li id=diff><a href="example.html" style="color: white">О себе</a></li>
+        </div>
+        <div></div>
+        <li id=diff><a href="example1.html" style="color: white">Резюме</a></li>
+        </div>
+        <div></div>
+        <li id=diff><a href="example2.html" style="color: white">Портфолио</a></li>
+        </div>
+        <div></div>
+        <li id=diff><a href="example3.html" style="color: white">Компетенция</a></li>
+        </div>
+        <div></div>
+        <li id=diff><a href="example4.html" style="color: white">Контакты</a></li>
+        </div>
+    </nav>
+    <header>
+        <h1 class="header-title" style="color: white">Веб - технологии</h1>
+        <h3 class="header-title" style="color: white">Университет "Дубна"</h3>
+    </header>
+    <main style="padding-top: 50px; padding-bottom: 50px;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eius optio, doloribus sit esse dolore.
+            Dolor possimus quod sunt, voluptas odit nostrum ab quo laboriosam quaerat fuga inventore eaque dolores.</p>
+    </main>
+    <footer>
+        <div>
+            <img src="img/2.jpg" alt="Vk" width="50"><img src="img/8.png" alt="Git" width="50">
+        </div>
+        <p>Сайт разработан студией Федора Дмитриева, Copyright 2023</p>
+    </footer>
+</body>
+
+</html>
